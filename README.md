@@ -2,6 +2,19 @@
 
 A collection of Claude Code skills I use for work.
 
+## Installation
+
+```bash
+git clone https://github.com/moose/agents-config.git ~/.agents
+```
+
+Then create symbolic links to make skills available to your agents:
+
+```bash
+ln -s ~/.agents/skills ~/.claude/skills
+ln -s ~/.agents/skills ~/.opencode/skills
+```
+
 ## Skills
 
 | Skill | Description |
