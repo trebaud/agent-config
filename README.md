@@ -31,6 +31,7 @@ ln -s ~/.agents/skills ~/.opencode/skills
 | [refactor](skills/refactor/SKILL.md) | Safe refactoring with automated test verification after each step. |
 | [rfc-generator](skills/rfc-generator/SKILL.md) | Creates RFC documents for new features through interactive questioning. |
 | [security-analysis](skills/security-analysis/SKILL.md) | Identifies security vulnerabilities and analyzes security reports. |
+| [source-code-auditor](skills/source-code-auditor/SKILL.md) | White-box security auditor with semgrep integration. Triages scan results and proposes concrete fixes. |
 | [specs-generator](skills/specs-generator/SKILL.md) | Creates SPECS.md files for new features and design documentation. |
 | [test-generator](skills/test-generator/SKILL.md) | Generates unit and integration tests following existing patterns. |
 
@@ -42,12 +43,12 @@ flowchart LR
     B --> C[Development<br/>kiss-check, refactor, clean-architecture]
     C --> D[Testing<br/>test-generator, debug]
     D --> E[Review & Deploy<br/>code-reviewer, security-analysis, create-pr]
-    E --> F[Maintenance<br/>security-analysis, macos-security-audit, debug]
+    E --> F[Maintenance<br/>security-analysis, source-code-auditor, macos-security-audit, debug]
 ```
 
 - **Planning** -- `specs-generator` for feature specs, `interview` to validate plans
 - **Design** -- `arch-diagram` to visualize the system, `kiss-check` to challenge complexity
 - **Development** -- `refactor` for safe simplification, `clean-architecture` for structural guidance
 - **Testing** -- `test-generator` + `debug` for comprehensive test coverage
-- **Review** -- `code-reviewer` and `security-analysis` before merging
-- **Maintenance** -- `macos-security-audit` for system hardening, `debug` for bug resolution
+- **Review** -- `code-reviewer`, `security-analysis`, and `source-code-auditor` before merging
+- **Maintenance** -- `source-code-auditor` for deep code audits, `macos-security-audit` for system hardening, `debug` for bug resolution

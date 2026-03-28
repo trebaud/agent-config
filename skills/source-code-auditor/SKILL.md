@@ -5,7 +5,7 @@ allowed-tools: Read, Grep, Glob, Bash, Write, Edit, Agent, AskUserQuestion
 license: Apache-2.0
 metadata:
   version: 0.1.0
-  author: moose
+  author: trebaud
 ---
 
 # Source code security auditor
